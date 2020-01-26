@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from Values import strings
+from TestData import values
 from .basescreen import BaseScreen
 
 
@@ -26,7 +26,7 @@ class GitHubPage(BaseScreen):
     def validate_account_is_opened(self):
         self.select_element(self.element).click()
         text = self.select_element(self.username).text
-        assert text == strings.user, " Incorrect email address or password"
+        assert text == values.user, " Incorrect email address or password"
 
 
 
